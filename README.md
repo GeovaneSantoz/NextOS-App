@@ -12,4 +12,5 @@ Criado especificamente para o ambiente de **gráficas e bureaus de impressão**,
 * **Desenvolvimento Ágil:** Código limpo e modular, pronto para escalar.
 
 **Tecnologia:** Python, Django.
+
 **Status:** Em desenvolvimento (MVP - Minimum Viable Product)
