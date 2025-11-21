@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ===== CENTRALIZAÇÃO DA TELA ===== */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center; /* centraliza horizontal */
+  align-items: center; /* centraliza vertical */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container geral */
+.container-login {
+  text-align: center;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo */
+.logo {
+  width: 300px;
+}
+
+/* Subtítulo */
+.subtitle {
+  margin-top: -30px;
+  font-size: 15px;
+  color: #030303;
+  letter-spacing: 5px;
+}
+
+/* Texto de boas-vindas */
+.welcome {
+  font-size: 17px;
+  color: #555;
+}
+
+/* Botão Google */
+￼ Simples .btn-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  /* AJUSTADO: Largura reduzida para centralizar mais */
+  width: 220px;
+
+  padding: 12px 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50px;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+}
+
+/* Divisor */
+.divider {
+  font-weight: 500;
+  color: #777;
+}
+
+.divider span {
+  padding: 0 8px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* ===== INPUTS ===== */
+.input-box {
+  position: relative;
+  /* AJUSTADO: Largura reduzida para centralizar mais */
+  width: 300px;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 16px 12px 45px;
+  border-radius: 50px;
+  border: 1px solid #ff8c00;
+  outline: none;
+
+  background: #ffffff; /* FUNDO BRANCO */
+  color: #000;
+}
+
+/* Ícone dentro dos inputs */
+.icon {
+  height: 20px;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+/* Remover cor amarelada do autocomplete */
+.input-box input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  box-shadow: 0 0 0 50px white inset !important;
+}
+
+/* ===== BOTÃO ENTRAR ===== */
+.btn-login {
+  /* AJUSTADO: Largura reduzida para centralizar mais */
+  width: 300px;
+  padding: 12px;
+
+  background: #ff8c00;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+
+  border-radius: 50px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.192);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.btn-login:active {
+  transform: translateY(3px);
+  box-shadow: 0px 3px 0px #d97400;
+}
+
+/* ===== LINKS ===== */
+.forgot {
+  display: block;
+  font-size: 14px;
+  text-decoration: none;
+  color: #777;
+}
+
+.triangulo {
+  position: absolute;
+  width: 220px;
+  opacity: 0.9;
+  pointer-events: none; /* evita clique */
+  user-select: none;
+}
+
+/* Superior esquerdo */
+.triangulo-top-left {
+  top: 70px;
+  left: 400px;
+}
+
+/* Inferior direito */
+.triangulo-bottom-right {
+  bottom: 40px;
+  right: 400px;
+}
+
+.triangulo img {
+  height: 400px;
+}

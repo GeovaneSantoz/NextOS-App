@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextOs | Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="container-login">
+
+        <!-- LOGO -->
+        <img src="{% static 'images/logo.png' %}" class="logo" alt="Logo">
+
+        <!-- Subtítulo -->
+        <p class="subtitle">Simples, rápido e direto</p>
+
+        <!-- Boas-vindas -->
+        <p class="welcome">
+            Seja Bem-vindo(a), inicie a sua sessão<br>
+            fazendo Login no App.
+        </p>
+
+        <!-- FORM -->
+        <form method="POST" action="{% url 'account_login' %}" class="form-login">
+            {% csrf_token %}
+
+            {{ form.non_field_errors }}
+
+            <!-- Email -->
+            <div class="input-box">
+                <img src="{% static 'icons/mail.svg' %}" class="icon">
+                {{ form.login }}
+            </div>
+
+            <!-- Senha -->
+            <div class="input-box">
+                <img src="{% static 'icons/lock.svg' %}" class="icon">
+                {{ form.password }}
+            </div>
+
+            <!-- Entrar -->
+            <button  class="btn-login">Entrar</button>
+
+            <!-- Esqueci a senha -->
+            <a href="{% url 'account_reset_password' %}" class="forgot">
+                Esqueci a senha
+            </a>
+
+            <!-- Registrar -->
+            <p class="register">
+                Não possui uma conta? <a href="{% url 'account_signup' %}">Registre-se</a>
+            </p>
+        </form>
+
+                <!-- Triângulo superior esquerdo -->
+        <img src="{% static 'images/right.png' %}" class="triangulo triangulo-top-left">
+
+        <!-- Triângulo inferior direito -->
+        <img src="{% static 'images/left.png' %}" class="triangulo triangulo-bottom-right">
+
+    </div>
+</body>
+</html>
+
+
